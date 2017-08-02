@@ -13,8 +13,9 @@ int gpio_init(void) {
 	printk(KERN_NOTICE "Hello !\n");
 
 	/* Allocate GPIO 17 before use */
-	if(gpio_request_one(GPIO_RPI3(17), GPIOF_INIT_HIGH, GPIO_ANY_GPIO_DESC)) {
-		printk("GPIO request faiure: %s\n", GPIO_ANY_GPIO_DESC);
+	if(gpio_request_one(GPIO_RPI3(17), GPIOF_DIR_OUT | GPIOF_INIT_HIGH |
+		GPIOF_EXPORT_DIR_CHANGEABLE, GPIO_DESC)) {
+		printk("GPIO request faiure: %s\n", GPIO_DESC);
 		return -ENODEV;
 	}
 
