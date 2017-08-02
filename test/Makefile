@@ -1,4 +1,4 @@
-obj-m += hello.o
+obj-m += gpio_test.o
 
 all:
 	make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -C $(BASEDIR)/linux M=$(PWD) modules
