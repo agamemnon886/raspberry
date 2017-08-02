@@ -2,17 +2,30 @@
 
 $ ./update_env.sh
 
-2) Set environment
+------------------------------------------------------------------------------
+
+2) Set environment:
 
 $ source ./setenv.sh
 
-3) Build kernel
+------------------------------------------------------------------------------
+
+3) Build kernel:
 
 $ make config
 $ make kernel
 $ make modules_install
 
-4) Build test
+------------------------------------------------------------------------------
+
+4) Configure, build kernel and modules using one command:
+
+$ make
+
+------------------------------------------------------------------------------
+
+5) Build test:
 
 $ cd test
 $ make
+
