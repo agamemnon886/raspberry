@@ -6,6 +6,8 @@
 #include <linux/init.h>
 #include <linux/interrupt.h>
 #include <linux/gpio.h>
+#include <linux/cdev.h>
+#include <linux/fs.h>
 
 #define DRIVER_AUTHOR "Kirill B."
 #define DRIVER_DESC   "Blink test"
@@ -15,6 +17,10 @@
 
 /* GPIO text */
 #define GPIO_DESC	"Some gpio pin description"
+
+#define MY_MAJOR  200
+#define MY_MINOR  0
+#define DEV_COUNT 1
 
 #endif /* __gpio_raspberry_pi3_h */
 
